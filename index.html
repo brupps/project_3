@@ -28,7 +28,13 @@
   <!-- D3 JavaScript -->
   <script src="https://d3js.org/d3.v7.min.js"></script>
   <!-- Our JavaScript -->
-  <script type="text/json" src="static/data.json"></script>
+  <script>
+    async function loadJson(){
+        const res = await fetch('data.json');
+        const json = await res.json();
+    }
+    loadJson();
+</script>
 </body>
 
 </html>
