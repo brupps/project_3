@@ -18,6 +18,21 @@
 
 <body>
 
+  <!-- The div that holds the dashboard title and dropdown menu-->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center">
+        <h1>Cyclonic Cartography: </br>Mapping Tornado Occurrences
+        <p>Choose a view from the dropdown menu below to explore some highlights of the dataset</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <div class="well">
+          <h5>Choose a data highlight to view **Refine wording**:</h5>
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+
   <!-- The div that holds our map -->
   <div id="map"></div>
 

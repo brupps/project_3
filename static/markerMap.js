@@ -75,8 +75,9 @@ function createMap(earthquake){
     // Create a layer control
     let layerControl = L.control.layers(baseMaps, overlayMaps).addTo(myMap);
 
+    // Updating the link to apply to our geoJSON
     // Create the Tectonic Plate geoJSON
-    d3.json("https://raw.githubusercontent.com/fraxen/tectonicplates/master/GeoJSON/PB2002_boundaries.json").then((geodata) => {
+    d3.json('https://raw.githubusercontent.com/brupps/project_3/main/static/data.geojson').then((geodata) => {
 
     let plateBoundaries = L.geoJson(geodata,{
         style: {
