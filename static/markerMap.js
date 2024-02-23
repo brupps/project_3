@@ -1,4 +1,4 @@
-
+const url = 'https://raw.githubusercontent.com/brupps/project_3/main/static/data.json'
 
 // Display the initial default view on dashboard
 function init() {
