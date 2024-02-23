@@ -30,7 +30,7 @@
   <!-- Our JavaScript -->
   <script>
     async function loadJson(){
-        const res = await fetch('/static/data.json');
+        const res = await fetch('/static/data.geojson');
         const json = await res.json();
     }
     loadJson();
