@@ -2,8 +2,8 @@ const url = 'https://raw.githubusercontent.com/brupps/project_3/main/static/data
 
 console.log(url)
 
-// d3.json(url).then((data) => {
-//     console.log(data);})
+d3.json(url).then((data) => {
+    console.log(data);})
 
 // Display the initial default view on dashboard
 function init() {
@@ -36,8 +36,6 @@ function init() {
         // chart(name);
     });
 }
-
-console.log(init)
 
 
 // // Adjust to apply to tornado data
@@ -197,3 +195,6 @@ console.log(init)
 // };
 
 // d3.json(url).then(earthquakeMarkers);
+
+
+init();
