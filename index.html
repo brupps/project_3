@@ -36,6 +36,33 @@
           <select id="selDataset" onchange="optionChanged(this.value)"></select>
         </div>
 
+      <!-- The divs that hold each map/chart (temporary) -->
+      
+      <!-- CHART -->
+      <div class="col-md-2">
+        <div id="chart"></div>
+      </div>
+
+      <!-- Heat map -->
+      <div class="col-md-5">
+        <div id="heat"></div>
+      </div>
+
+      <!-- Marker map -->
+      <div class="col-md-5">
+        <div id="marker"></div>
+      </div>
+
+    <!-- Polyline map -->
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="polyline"></div>
+      </div>
+    </div>
+
+  </div>
+
   <!-- The div that holds our map -->
   <div id="map"></div>
 
@@ -47,6 +74,7 @@
   <!-- D3 JavaScript -->
   <script src="https://d3js.org/d3.v7.min.js"></script>
 
+  <!-- (YOUR NAME) JavaScript -->
 
 </body>
 
