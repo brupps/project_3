@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Tornado</title>
-  
+
   <!-- Dashboard formatting-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
@@ -36,6 +36,33 @@
           <select id="selDataset" onchange="optionChanged(this.value)"></select>
         </div>
 
+      <!-- The divs that hold each map/chart (temporary) -->
+      
+      <!-- CHART -->
+      <div class="col-md-2">
+        <div id="chart"></div>
+      </div>
+
+      <!-- Heat map -->
+      <div class="col-md-5">
+        <div id="heat"></div>
+      </div>
+
+      <!-- Marker map -->
+      <div class="col-md-5">
+        <div id="marker"></div>
+      </div>
+
+    <!-- Polyline map -->
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="polyline"></div>
+      </div>
+    </div>
+
+  </div>
+
   <!-- The div that holds our map -->
   <div id="map"></div>
 
@@ -43,17 +70,10 @@
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
     crossorigin=""></script>
+
   <!-- D3 JavaScript -->
   <script src="https://d3js.org/d3.v7.min.js"></script>
-  <!-- Our JavaScript -->
-  <script type="text/javascript" src="static/js/markerMap.js"></script>
-  <script>
-    async function loadJson(){
-        const res = await fetch('/static/data.geojson');
-        const json = await res.json();
-    }
-    loadJson();
-</script>
+
 </body>
 
 </html>

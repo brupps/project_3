@@ -1,10 +1,15 @@
 const url = 'https://raw.githubusercontent.com/brupps/project_3/main/static/data.json'
 
+console.log(url)
+
+d3.json(url).then((data) => {
+    console.log(data);})
+
 // Display the initial default view on dashboard
 function init() {
 
     // Use D3 to select the dropdown menu (make sure this aligns in the HTML)
-    let dropDownMenu = d3.select('#selDataset');
+    // let dropDownMenu = d3.select('#selDataset');
 
     // Get data and console log it
     d3.json(url).then((data) => {
@@ -190,3 +195,6 @@ function init() {
 // };
 
 // d3.json(url).then(earthquakeMarkers);
+
+
+init();
