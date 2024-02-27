@@ -1,10 +1,15 @@
 
-
 // initialize url/ file path
+const url = 'https://raw.githubusercontent.com/brupps/project_3/main/static/data.geojson';
+
+// display the data
+d3.json(url).then(function(response){
+    console.log(response);
+});
 
 // create the map
-let myMap = L.map('// location name',{
-    center: [],
+let myMap = L.map('map',{
+    center: [39.8283, -98.5795],
     zoom: 5
 });
 
@@ -14,31 +19,52 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(myMap);
 
 // create a for loop to gather start and end coords from the json
-for (let i=0; i < data.length; i++){
+d3.json(url).then(function(data){
 
-// initialize variables to store coords and line info
-let startCoords = [];
-let endCoords = [];
-let line = [];
+for (let i=0; i < data.features.length; i++){
 
-    // only pull data from EF5 tornadoes
-    if (data[i].tor_f_scale == 'EF5'){
+    // initialize variables to store coords and line info
+    let startCoords = [];
+    let endCoords = [];
+    let line = [];
 
-        startCoords.push([data[i].begin_lat, data[i].begin_lon]);
-        endCoords.push([data[i].end_lat, data[i].end_lon]);
-        line.push([startCoords, endCoords]);
+    startCoords.push([data.features[i].properties.LAT, data.features[i].properties.LON]);
+    endCoords.push([data.features[i].properties.END_LAT, data.features[i].properties.END_LON]);
+    line.push([startCoords, endCoords]);
 
-        let color = '';
-        if (depth > -10 && depth < 10){color = 'green';}
-        else if (depth >= 10 && depth < 30){color = 'yellow';}
-        else if (depth >= 30 && depth < 50){color = 'orange';}
-        else if (depth >= 50 && depth < 70){color = 'red';}
-        else if (depth >= 70 && depth < 90){color = 'purple';}
-        else if (depth > 90){color = 'black';}
+    let color = '';
+        if (data.features[i].properties.TOR_F_SCAL == '3'){color = 'rgb(19, 235, 45)';}
+        else if (data.features[i].properties.TOR_F_SCAL == '4'){color = 'rgb(242, 24, 31)';}
+        else if (data.features[i].properties.TOR_F_SCAL == '5'){color = 'rgb(186, 174, 0)';}
 
-        L.polyline(line, {
-            color: color
-        }).bindPopup(`location, property damage`).addTo(myMap);
+    L.polyline(line, {
+        color: color
+    }).bindPopup(`year, location, property damage`).addTo(myMap);
+
+    console.log(line);
+
     };
-};
+});
+
+
 // set up the legend 
+var legend = L.control({position: 'bottomright'});
+  legend.onAdd = function() {
+    var div = L.DomUtil.create('div', 'info legend')
+    var limits = ['EF3', 'EF4', 'EF5'];
+    var colors = ['rgb(19, 235, 45)', 'rgb(242, 24, 31)', 'rgb(186, 174, 0)'];
+    var labels = [];
+
+    // Add min & max
+    div.innerHTML = '<h2>EF rating</h2>'+'<div class="labels"><div class="min">' + limits[0] + '</div> \
+			<div class="max">' + limits[limits.length - 1] + '</div></div>'
+
+    limits.forEach(function (limit, index) {
+      labels.push('<li style="background-color: ' + colors[index] + '"></li>')
+    })
+
+    div.innerHTML += '<ul>' + labels.join('') + '</ul>'
+    return div;
+  };
+
+  legend.addTo(myMap);
