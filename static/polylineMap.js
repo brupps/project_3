@@ -3,68 +3,104 @@
 const url = 'https://raw.githubusercontent.com/brupps/project_3/main/static/data.geojson';
 
 // display the data
-d3.json(url).then(function(response){
+d3.json(url).then(function (response) {
     console.log(response);
 });
 
-// create the map
-let myMap = L.map('map',{
-    center: [39.8283, -98.5795],
-    zoom: 5
-});
 
-// add the tile layer
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(myMap);
+let EF3 = L.layerGroup();
+let EF4 = L.layerGroup();
+let EF5 = L.layerGroup();
 
-// create a for loop to gather start and end coords from the json
-d3.json(url).then(function(data){
+d3.json(url).then(function (data) {
 
-for (let i=0; i < data.features.length; i++){
+    // create a for loop to gather start and end coords from the json
+    for (let i = 0; i < data.features.length; i++) {
 
-    // initialize variables to store coords and line info
-    let startCoords = [];
-    let endCoords = [];
-    let line = [];
+        // initialize variables to store coords
+        let startCoords = [];
+        let endCoords = [];
 
-    startCoords.push([data.features[i].properties.LAT, data.features[i].properties.LON]);
-    endCoords.push([data.features[i].properties.END_LAT, data.features[i].properties.END_LON]);
-    line.push([startCoords, endCoords]);
+        startCoords = [parseFloat(data.features[i].properties.LAT), parseFloat(data.features[i].properties.LON)];
+        endCoords = [parseFloat(data.features[i].properties.END_LAT), parseFloat(data.features[i].properties.END_LON)];
 
-    let color = '';
-        if (data.features[i].properties.TOR_F_SCAL == '3'){color = 'rgb(19, 235, 45)';}
-        else if (data.features[i].properties.TOR_F_SCAL == '4'){color = 'rgb(242, 24, 31)';}
-        else if (data.features[i].properties.TOR_F_SCAL == '5'){color = 'rgb(186, 174, 0)';}
+        if (data.features[i].properties.TOR_F_SCALE == '3') {
+                L.polyline([startCoords, endCoords], {
+                color: 'rgb(19, 235, 45)'
+            }).bindPopup(`<h2>location: ${data.features[i].properties.CZ_NAME_STR}, ${data.features[i].properties.STATE_ABBR}</h2>
+                <hr> <h3>date: ${data.features[i].properties.BEGIN_DATE}</h3> 
+                <hr> <h3>length: ${data.features[i].properties.TOR_LENGTH}</h3>`).addTo(EF3)
+        }
 
-    L.polyline(line, {
-        color: color
-    }).bindPopup(`year, location, property damage`).addTo(myMap);
+        else if (data.features[i].properties.TOR_F_SCALE == '4') {
 
-    console.log(line);
+                L.polyline([startCoords, endCoords], {
+                color: 'rgb(218, 136, 0)'
+            }).bindPopup(`<h2>location: ${data.features[i].properties.CZ_NAME_STR}, ${data.features[i].properties.STATE_ABBR}</h2>
+                <hr> <h3>date: ${data.features[i].properties.BEGIN_DATE}</h3> 
+                <hr> <h3>length: ${data.features[i].properties.TOR_LENGTH}</h3>`).addTo(EF4)
+        }
+
+        else if (data.features[i].properties.TOR_F_SCALE == '5') {
+
+                L.polyline([startCoords, endCoords], {
+                color: 'rgb(242, 24, 31)'
+            }).bindPopup(`<h2>location: ${data.features[i].properties.CZ_NAME_STR}, ${data.features[i].properties.STATE_ABBR}</h2>
+                <hr> <h3>date: ${data.features[i].properties.BEGIN_DATE}</h3> 
+                <hr> <h3>length: ${data.features[i].properties.TOR_LENGTH}</h3>`).addTo(EF5)
+        }
 
     };
+
+});
+
+let street = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+});
+
+let overlayMaps = {
+    'EF3': EF3,
+    'EF4': EF4,
+    'EF5': EF5
+};
+
+let baseMaps = {
+    'street map': street
+};
+
+// create the map
+let myMap = L.map('map', {
+    center: [39.8283, -98.5795],
+    zoom: 5,
+    layers: [street, EF3, EF4, EF5]
 });
 
 
+// create a layer control
+L.control.layers(baseMaps, overlayMaps, {
+    collapsed: false
+  }).addTo(myMap);
+
+  
+////////////////////////////////////////////////////////////////////////////////////////
 // set up the legend 
-var legend = L.control({position: 'bottomright'});
-  legend.onAdd = function() {
+var legend = L.control({ position: 'bottomright' });
+legend.onAdd = function () {
     var div = L.DomUtil.create('div', 'info legend')
     var limits = ['EF3', 'EF4', 'EF5'];
-    var colors = ['rgb(19, 235, 45)', 'rgb(242, 24, 31)', 'rgb(186, 174, 0)'];
+    var colors = ['rgb(19, 235, 45)', 'rgb(218, 136, 0)', 'rgb(242, 24, 31)'];
     var labels = [];
 
     // Add min & max
-    div.innerHTML = '<h2>EF rating</h2>'+'<div class="labels"><div class="min">' + limits[0] + '</div> \
+    div.innerHTML = '<h2>EF rating</h2>' + '<div class="labels"><div class="min">' + limits[0] + '</div> \
 			<div class="max">' + limits[limits.length - 1] + '</div></div>'
 
     limits.forEach(function (limit, index) {
-      labels.push('<li style="background-color: ' + colors[index] + '"></li>')
+        labels.push('<li style="background-color: ' + colors[index] + '"></li>')
     })
 
     div.innerHTML += '<ul>' + labels.join('') + '</ul>'
     return div;
-  };
+};
 
-  legend.addTo(myMap);
+legend.addTo(myMap);
