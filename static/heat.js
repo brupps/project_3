@@ -1,14 +1,29 @@
-let myMap = L.map("map", {
-  center: [39.8283, -98.5795],
-  zoom: 4
-  });
+
 
 // Adding the tile layer
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+let base = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(myMap);
+});
 
 let url = "https://raw.githubusercontent.com/brupps/project_3/main/static/data.geojson";
+
+let tornadoAlley = "static/tornadoAlley.geojson";
+
+ // Create a baseMap to hold the base and add to map.
+ let baseMaps = {
+  "Base": base
+  };
+
+//Create overlaymap to hold earthquake locations.
+let overlayMaps = {
+  "Tornado Alley": tornadoAlley,
+};
+
+let myMap = L.map("map", {
+  center: [39.8283, -98.5795],
+  zoom: 4,
+  layers: [base, tornadoAlley]
+  });
 
 d3.json(url).then(function(response) {
 
