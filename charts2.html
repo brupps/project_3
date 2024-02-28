@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tornado Data Charts</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 jumbotron text-center">
+        <h1>Tornado Data Charts</h1>
+        <p>Explore the 2000 - 2023 tornado data by making a selection below.</p>
+       
+      </div>
+    </div>
+     
+    <div class="row">
+
+      <div class="col-md-10">
+        <p>Charts based on data from: <a href>"https://www.ncdc.noaa.gov/stormevents/"</a></p>
+        <canvas id="myChart"></canvas>
+        <select onchange="changeChart(this)">
+          <option value="bar">Deaths and Injuries</option>
+          <option value="line">Tornados by Month</option>
+          <option value="doughnut">Tornados by Time Zone</option>
+        </select>
+      </div>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+  <script src="chartjava2.js"></script>
+  
+
+
+</br>
+</br>
+
+</body>
+
+</html>
