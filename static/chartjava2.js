@@ -67,7 +67,7 @@ const config2 = {
   }
 };
 
-//line chart
+//line charts- overall, then broken into 6 year chunks
 const config3 = {
   type: 'line',
   data: {
@@ -97,12 +97,157 @@ const config3 = {
         },
         title: {
             display: true,
-            text: "Count of Tornados by Month",
+            text: "Tornados by Month: 2000-2023",
             font: {size: 20}
         },
     },
   }
 };
+
+const config4 = {
+    type: 'line',
+    data: {
+      labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+      datasets: [{
+        label: 'CST',
+        data: [5, 7, 6, 27, 65, 22, 4, 2, 3, 6, 36, 4],
+        borderColor: 'red'
+      },
+      {
+      label: 'EST',
+      data: [0, 4, 2, 2, 6, 0, 2, 0, 8, 2, 10, 1],
+      borderColor: 'lime'     
+      },
+      {
+      label: 'MST',
+      data: [0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0],
+      borderColor: 'blue'   
+      }
+  ]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+          legend: {
+              position: 'top',
+          },
+          title: {
+              display: true,
+              text: "Tornados by Month: 2000-2005",
+              font: {size: 20}
+          },
+      },
+    }
+  };
+
+
+const config5 = {
+type: 'line',
+data: {
+    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+    datasets: [{
+    label: 'CST',
+    data: [18, 25, 26, 117, 66, 27, 4, 16, 2, 1, 3, 6],
+    borderColor: 'red'
+    },
+    {
+    label: 'EST',
+    data: [1, 9, 13, 33, 7, 6, 0, 1, 2, 2, 1, 1],
+    borderColor: 'lime'     
+    },
+    {
+    label: 'MST',
+    data: [0, 0, 1, 0, 1, 0, 2, 0, 0, 2, 0, 0],
+    borderColor: 'blue'   
+    }
+]
+},
+options: {
+    responsive: true,
+    plugins: {
+        legend: {
+            position: 'top',
+        },
+        title: {
+            display: true,
+            text: "Tornados by Month: 2006-2011",
+            font: {size: 20}
+        },
+    },
+}
+};
+
+const config6 = {
+    type: 'line',
+    data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        datasets: [{
+        label: 'CST',
+        data: [2, 17, 4, 31, 48, 13, 2, 1, 6, 15, 16],
+        borderColor: 'red'
+        },
+        {
+        label: 'EST',
+        data: [8, 2, 22, 1, 2, 0, 2, 2, 0, 3, 0],
+        borderColor: 'lime'     
+        },
+        {
+        label: 'MST',
+        data: [0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0],
+        borderColor: 'blue'   
+        }
+    ]
+    },
+    options: {
+        responsive: true,
+        plugins: {
+            legend: {
+                position: 'top',
+            },
+            title: {
+                display: true,
+                text: "Tornados by Month: 2012-2017",
+                font: {size: 20}
+            },
+        },
+    }
+    };
+
+const config7 = {
+    type: 'line',
+    data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        datasets: [{
+        label: 'CST',
+        data: [4, 1, 37, 30, 21, 6, 5, 2, 1, 3, 8, 30],
+        borderColor: 'red'
+        },
+        {
+        label: 'EST',
+        data: [3, 1, 11, 19, 8, 0, 4, 2, 1, 0, 0, 2],
+        borderColor: 'lime'     
+        },
+        {
+        label: 'MST',
+        data: [0, 0, 0, 0, 0, 4, 1, 1, 0, 0, 0, 0],
+        borderColor: 'blue'   
+        }
+    ]
+    },
+    options: {
+        responsive: true,
+        plugins: {
+            legend: {
+                position: 'top',
+            },
+            title: {
+                display: true,
+                text: "Tornados by Month: 2018-2023",
+                font: {size: 20}
+            },
+        },
+    }
+    };
 
 //render initial chart
 let myChart = new Chart(document.getElementById('myChart'), config1);
@@ -112,12 +257,26 @@ function changeChart(chartType) {
   myChart.destroy();
 
   //create if-then statements to make appropriate charts
-  if (chartType.value === 'line')
-    myChart = new Chart(document.getElementById('myChart'), config3);
+  if (chartType.value === 'bar')
+    myChart = new Chart(document.getElementById('myChart'), config1);
   
   if (chartType.value === 'doughnut')
     myChart = new Chart(document.getElementById('myChart'), config2);
 
-  if (chartType.value === 'bar')
-    myChart = new Chart(document.getElementById('myChart'), config1);
+  if (chartType.value === 'line1')
+    myChart = new Chart(document.getElementById('myChart'), config3);
+
+  if (chartType.value === 'line2')
+    myChart = new Chart(document.getElementById('myChart'), config4);
+
+  if (chartType.value === 'line3')
+    myChart = new Chart(document.getElementById('myChart'), config5);
+
+  if (chartType.value === 'line4')
+    myChart = new Chart(document.getElementById('myChart'), config6);
+
+  if (chartType.value === 'line5')
+    myChart = new Chart(document.getElementById('myChart'), config7);
+
+
 }
