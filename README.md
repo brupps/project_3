@@ -1,4 +1,4 @@
-# Cyclonic Cartography: Mapping Significant Tornado Occurrences
+# Cyclonic Cartography: Mapping Significant Tornadoes
 
 ## Description/ overview
 The topic we have chosen is tornado data across the US. We have opted to investigate multiple avenues including the number of tornadoes, their intensity, frequency, width, and paths. Living in Oklahoma, tornadoes are something nearly everyone can relate to in some way; learning more about them and presenting that information in an easily accessible/ understandable format would be highly educational.
