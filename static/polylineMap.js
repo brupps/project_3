@@ -30,7 +30,8 @@ d3.json(url).then(function (data) {
                 L.polyline([startCoords, endCoords], {
                 color: 'rgb(19, 235, 45)'
             }).bindPopup(`<h2>location: ${data.features[i].properties.BEGIN_LOCATION}, ${data.features[i].properties.STATE_ABBR}</h2>
-                <hr> <h3>date: ${data.features[i].properties.BEGIN_DATE}</h3>`).addTo(EF3)
+                <hr> <h3>date: ${data.features[i].properties.BEGIN_DATE}</h3> <hr>
+                <h3>length (miles): ${data.features[i].properties.TOR_LENGTH/ 10}</h3>`).addTo(EF3)
         }
 
         // adding EF4 tornadoes to their corresponding layer group
@@ -39,7 +40,8 @@ d3.json(url).then(function (data) {
                 L.polyline([startCoords, endCoords], {
                 color: 'rgb(218, 136, 0)'
             }).bindPopup(`<h2>location: ${data.features[i].properties.BEGIN_LOCATION}, ${data.features[i].properties.STATE_ABBR}</h2>
-                <hr> <h3>date: ${data.features[i].properties.BEGIN_DATE}</h3>`).addTo(EF4)
+                <hr> <h3>date: ${data.features[i].properties.BEGIN_DATE}</h3><hr>
+                <h3>length (miles): ${data.features[i].properties.TOR_LENGTH/ 10}</h3>`).addTo(EF4)
         }
 
         // adding EF5 tornadoes to their corresponding layer group
@@ -48,7 +50,8 @@ d3.json(url).then(function (data) {
                 L.polyline([startCoords, endCoords], {
                 color: 'rgb(242, 24, 31)'
             }).bindPopup(`<h2>location: ${data.features[i].properties.BEGIN_LOCATION}, ${data.features[i].properties.STATE_ABBR}</h2>
-                <hr> <h3>date: ${data.features[i].properties.BEGIN_DATE}</h3>`).addTo(EF5)
+                <hr> <h3>date: ${data.features[i].properties.BEGIN_DATE}</h3><hr>
+                <h3>length (miles): ${data.features[i].properties.TOR_LENGTH/ 10}</h3>`).addTo(EF5)
         }
 
     };
@@ -76,7 +79,7 @@ let baseMaps = {
 let myMap = L.map('map', {
     center: [39.8283, -98.5795],
     zoom: 5,
-    layers: [street, EF3, EF4, EF5]
+    layers: [street]
 });
 
 // create a layer control
