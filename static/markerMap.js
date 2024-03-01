@@ -1,17 +1,9 @@
 const url = 'https://raw.githubusercontent.com/brupps/project_3/main/static/data.geojson'
 
-console.log(url)
-
-d3.json(url).then((data) => {
-    console.log(data);
-});
-
-
 
 // Function to create the map
 function createMap(tornado) {
     d3.json(url).then((data) => {
-        console.log(data);
 
         // Add the map view tile
         let view = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -86,8 +78,6 @@ function createMap(tornado) {
 function tornadoMarkers(response) {
 
     d3.json(url).then((data) => {
-
-        console.log(data);
 
         // Function to determine marker size
         function circleSize(TOR_F_SCALE) {
