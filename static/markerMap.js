@@ -72,6 +72,7 @@ function createMap(tornado) {
         // Add legend to map
         legend.addTo(myMap);
 
+
     })
 };
 
