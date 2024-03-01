@@ -26,13 +26,14 @@ let overlayMaps = {
   "Night": night,
 };
 
+// Create map
 let myMap = L.map("map", {
   center: [39.8283, -98.5795],
   zoom: 4,
   layers: [base]
   });
 
-
+// Call geoJSON for tornado alley polygon
 d3.json(tornadoAlley).then((geodata)=> {
   let alley = L.geoJson(geodata,{
     style: {
@@ -44,10 +45,11 @@ d3.json(tornadoAlley).then((geodata)=> {
   layerControl.addOverlay(alley, 'Tornado Alley');
 });
 
+// Add Layer Control
  let layerControl = L.control.layers(baseMaps,overlayMaps,
   {collapsed: false,}).addTo(myMap);
 
-  
+// Heat Points Function  
 d3.json(url).then(function(response) {
 
   console.log(response);
