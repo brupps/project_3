@@ -8,60 +8,60 @@ Due to the large number of tornadoes that happen in the USA, we will concentrate
 One thing we notice from the data is that the biggest concentration of more significant tornadoes seem to occur in the southern states as opposed to the center of the US that most consider ‘Tornado Alley.’
 
 ##Methodology
-1.Finding the data
+1. Finding the data
 - The national weather service had all the data we needed and we could export CSV files using our parameters. www.weather.gov.
 
-2.Cleaning the data
+2. Cleaning the data
 - Due to the 500 row limit, there were three separate CSV files. The three files were combined into one. The team determined which columns were necessary and which could be dropped. There were two rows that were missing latitude and longitude data and those rows were removed. 
 
-3.Creating a database
+3. Creating a database
 - The csv file was imported into mongoDB and Python was used to clean several columns.
 - Pandas was then utilized to create several data frames containing summary information to be used for creating charts in the next section.
 
-4.Setting up the HTML + CSS and deploying the servers
+4. Setting up the HTML + CSS and deploying the servers
 -Since each visualization is contained within its own page we went through and created our own individual html and css documents (making sure to add the appropriate plugins and formatting)
 
 **_Since each team member created their visualizations independently we all took different approaches with our methodologies; our independent workflows within the code itself is outlined more clearly within the js files_**
 
-5.Creating the final index.html page 
+5. Creating the final index.html page 
 
 
 ##Files
 **Static folder**
 Contains all the javascript files the team used to create their visualizations as well as the data (json and geojson files) and css documents required to create them
--<a href="https://github.com/brupps/project_3/blob/main/static/chartjava2.js">chartjava2.js</a>
--Angie’s js file containing the code for the chartsJS visualizations which includes several different charts displaying different information
+- <a href="https://github.com/brupps/project_3/blob/main/static/chartjava2.js">chartjava2.js</a>
+- Angie’s js file containing the code for the chartsJS visualizations which includes several different charts displaying different information
 - <a href="https://github.com/brupps/project_3/blob/main/static/heat.js">heat.js </a>
--Barb’s js file containing the code for the heat map/ tornado alley visualization
--<a href="https://github.com/brupps/project_3/blob/main/static/markerMap.js">markerMap.js </a>
--Amanda’s js file containing the code for the marker map visualization, displaying individual tornadoes and additional data
--<a href="https://github.com/brupps/project_3/blob/main/static/polylineMap.js">polylineMap.js </a>
--Cassidy’s js file containing the code for the polyline visualization, demonstrating tornado paths
+- Barb’s js file containing the code for the heat map/ tornado alley visualization
+- <a href="https://github.com/brupps/project_3/blob/main/static/markerMap.js">markerMap.js </a>
+- Amanda’s js file containing the code for the marker map visualization, displaying individual tornadoes and additional data
+- <a href="https://github.com/brupps/project_3/blob/main/static/polylineMap.js">polylineMap.js </a>
+- Cassidy’s js file containing the code for the polyline visualization, demonstrating tornado paths
 
 **HTML files**
 The html files associated with the webpages for each of our visualizations
 
--index.html
-	-The main page for all of our visualizations
+- index.html
+	- The main page for all of our visualizations
 
--charts2.html
+- charts2.html
 ![a screenshot of the chartsJS visualization](https://github.com/brupps/project_3/blob/main/images/charts2image.PNG)
 
--heatindex.html
+- heatindex.html
 ![a screenshot of the heat map/ tornado alley visualization](https://github.com/brupps/project_3/blob/main/images/heatIndexImage.PNG)
 
--markerMap.html
+- markerMap.html
 ![a screenshot of the marker map visualization](https://github.com/brupps/project_3/blob/main/images/markerMapImage.PNG)
 
--polylineMap.html
+- polylineMap.html
 ![a screenshot of the polyline map visualization](https://github.com/brupps/project_3/blob/main/images/polylineMapImage.PNG)
 
 **Other Files**
--Cyclonic Cartography.pptx
-	-The powerpoint presentation we as a team presented during class; includes the process we went through to complete the objectives provided
+- Cyclonic Cartography.pptx
+	- The powerpoint presentation we as a team presented during class; includes the process we went through to complete the objectives provided
 
--NoSQL_setup.ipynb
-	-The jupyter notebook file used to create the MongoDB database which houses the json and geojson files used throughout the project
+- NoSQL_setup.ipynb
+	- The jupyter notebook file used to create the MongoDB database which houses the json and geojson files used throughout the project
 
 
 ## Acknowledgements
