@@ -77,6 +77,6 @@ The html files associated with the webpages for each of our visualizations
 ## Resources
 - <a href="https://www.ncdc.noaa.gov/stormevents/listevents.jsp?eventType=%28C%29+Tornado&beginDate_mm=01&beginDate_dd=01&beginDate_yyyy=2000&endDate_mm=12&endDate_dd=31&endDate_yyyy=2010&hailfilter=0.00&tornfilter=3&windfilter=000&sort=DT&submitbutton=Search&statefips=-999%2CALL">The ‘storm events database’ from the National Centers for Environmental Information (our main source of data, which we converted to a json/ geojson format)</a>
 - <a href="https://www.youtube.com/watch?v=mH6MfzUJRms">Creating a dropdown menu with ChartsJS</a>
-- <a href=”https://www.chartjs.org/docs/latest/samples/information.html”>ChartsJS </a>
+- <a href="https://www.chartjs.org/docs/latest/samples/information.html">ChartsJS </a>
 - <a href="https://geojson.io/#map=2/0/20">geoJSON editor </a>
 - <a href="https://www.accuweather.com/en/severe-weather/is-tornado-alley-shifting-east/1162839">Accuweather for tornado alley shape </a>
