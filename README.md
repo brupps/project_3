@@ -58,6 +58,12 @@ The html files associated with the webpages for each of our visualizations
 - **polylineMap.html**
 ![a screenshot of the polyline map visualization](https://github.com/brupps/project_3/blob/main/images/polylineMapImage.PNG)
 
+### Resources folder
+
+Contains all the CSV (cleaned and uncleaned) files that were later converted into json and geojson files (located in the static folder)
+
+- AllStates2000-2023EF3-5 is the fully cleaned file; we combined and cleaned (deleted unnecessary columns and missing data) the other three CSVs into this one in order to include all the necessary dates
+
 ### Other Files
 - Cyclonic Cartography.pptx
 	- The powerpoint presentation we as a team presented during class; includes the process we went through to complete the objectives provided
