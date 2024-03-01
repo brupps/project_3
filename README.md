@@ -62,7 +62,7 @@ The html files associated with the webpages for each of our visualizations
 
 Contains all the CSV (cleaned and uncleaned) files that were later converted into json and geojson files (located in the static folder)
 
-- AllStates2000-2023EF3-5 is the fully cleaned file; we combined and cleaned (deleted unnecessary columns and missing data) the other three CSVs into this one in order to include all the necessary dates
+- AllStates2000-2023EF3-5 is the fully cleaned file; we cleaned (deleted unnecessary columns and missing data) and combined the other three CSVs into this one in order to include all the necessary dates
 
 ### Other Files
 - Cyclonic Cartography.pptx
