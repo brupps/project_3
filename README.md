@@ -81,6 +81,15 @@ Contains all the CSV (cleaned and uncleaned) files that were later converted int
 	- The jupyter notebook file used to create the MongoDB database which houses the json and geojson files used throughout the project
 
 
+## Ethical Considerations
+There was no personal information involved with the data in this project. The data is part of the public domain and we are able to use freely as long as we do not: 
+- Claim it as our own
+- Use it in a way that implies we are affiliated with, or endorsed by, NOAA
+- Modify content and then present as official government material.
+
+Our project was only exploratory in nature and not intended to influence policy or decision making of any kind.
+
+
 ## Acknowledgements
 - <a href="https://github.com/brupps">Barb Rupps</a>
 - <a href="https://github.com/angiecfoust">Angie Foust </a>
