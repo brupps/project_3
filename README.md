@@ -53,7 +53,7 @@ Contains all the javascript files the team used to create their visualizations a
 The html files associated with the webpages for each of our visualizations
 
 - index.html
-	- The main page for all of our visualizations
+	- The landing page for all of our visualizations
 
 - **charts2.html**
 ![a screenshot of the chartsJS visualization](https://github.com/brupps/project_3/blob/main/images/charts2image.PNG)
