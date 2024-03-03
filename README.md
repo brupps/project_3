@@ -38,10 +38,16 @@ Contains all the javascript files the team used to create their visualizations a
 	- Amanda’s js file containing the code for the marker map visualization, displaying individual tornadoes and additional data
 - <a href="https://github.com/brupps/project_3/blob/main/static/polylineMap.js">polylineMap.js </a>
 	- Cassidy’s js file containing the code for the polyline visualization, demonstrating tornado paths
+- chart.cjs
+	- (add description)
+- tornadoAlley.geojson
+	- The geojson file used in the heat.js code to create the polygon shape representing tornado alley
+- data.json + data.geojson
+	- The main data source (converted from CSVs) used throughout all the visualizations 
 
 ### HTML files
 
-The html files associated with the webpages for each of our visualizations
+The html files (located in the html folder) associated with the webpages for each of our visualizations
 
 - index.html
 	- The main page for all of our visualizations
