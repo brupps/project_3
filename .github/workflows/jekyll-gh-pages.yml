@@ -1,6 +1,6 @@
 # Sample workflow for building and deploying a Jekyll site to GitHub Pages
 name: Deploy Jekyll with GitHub Pages dependencies preinstalled
-            - name: Setup Java JDK
+        
   uses: actions/setup-java@v4.1.0
   with:
     # The Java version to set up. Takes a whole or semver Java version. See examples of supported syntax in README file
