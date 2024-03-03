@@ -26,7 +26,7 @@ One thing we notice from the data is that the biggest concentration of more sign
 5. Creating the final index.html page 
 
 ## Additional library, not used in class
-- Charts.js; allows you to create a variety of charts (bar, line, etc.) within javascript (more information in the resources section)
+- **Charts.js**; allows you to create a variety of charts (bar, line, etc.) within javascript (more information in the resources section)
 
 
 ## Files
