@@ -42,7 +42,7 @@ Contains all the javascript files the team used to create their visualizations a
 - <a href="https://github.com/brupps/project_3/blob/main/static/polylineMap.js">polylineMap.js </a>
 	- Cassidy’s js file containing the code for the polyline visualization, demonstrating tornado paths
 - chart.cjs
-	- (add description)
+	- Part of Charts JS; provided/downloaded from the Charts JS documentation.
 - tornadoAlley.geojson
 	- The geojson file used in the heat.js code to create the polygon shape representing tornado alley
 - data.json + data.geojson
