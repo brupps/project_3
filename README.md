@@ -48,9 +48,9 @@ Contains all the javascript files the team used to create their visualizations a
 - data.json + data.geojson
 	- The main data source (converted from CSVs) used throughout all the visualizations 
 
-### HTML files
+### HTML folder
 
-The html files (located in the html folder) associated with the webpages for each of our visualizations
+The html files associated with the webpages for each of our visualizations
 
 - index.html
 	- The main page for all of our visualizations
