@@ -21,12 +21,14 @@ One thing we notice from the data is that the biggest concentration of more sign
 4. Setting up the HTML + CSS and deploying the servers
 	- Since each visualization is contained within its own page we went through and created our own individual html and css documents (making sure to add the appropriate plugins and formatting)
 
-***Since each team member created their visualizations independently we all took different approaches with our methodologies; our independent workflows within the code itself is outlined more clearly within the js files***
+5. Creating the final index.html page
+   	- Used a website template generator and then writing the HTML code.
 
-5. Creating the final index.html page using a template and then writing the HTML code.
+***Since each team member created their visualizations independently we all took different approaches with our methodologies; our independent workflows within the code itself is outlined more clearly within the js files***
 
 ## Additional library, not used in class
 - **Charts.js**; allows you to create a variety of charts (bar, line, etc.) within javascript (more information in the resources section)
+- **Siter.io**; creates a website template to use 
 
 
 ## Files
@@ -52,8 +54,8 @@ Contains all the javascript files the team used to create their visualizations a
 
 The html files associated with the webpages for each of our visualizations
 
-- index.html
-	- The landing page for all of our visualizations
+- **index.html**
+![a screenshot of the landing page](https://github.com/brupps/project_3/blob/main/images/index.PNG)
 
 - **charts2.html**
 ![a screenshot of the chartsJS visualization](https://github.com/brupps/project_3/blob/main/images/charts2image.PNG)
