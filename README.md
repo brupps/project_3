@@ -22,7 +22,7 @@ One thing we notice from the data is that the biggest concentration of more sign
 	- Since each visualization is contained within its own page we went through and created our own individual html and css documents (making sure to add the appropriate plugins and formatting)
 
 5. Creating the final index.html page
-   	- Used a website template generator and then writing the HTML code.
+   	- Used a website template generator then wrote the HTML code.
 
 ***Since each team member created their visualizations independently we all took different approaches with our methodologies; our independent workflows within the code itself is outlined more clearly within the js files***
 
