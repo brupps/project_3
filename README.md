@@ -23,7 +23,7 @@ One thing we notice from the data is that the biggest concentration of more sign
 
 ***Since each team member created their visualizations independently we all took different approaches with our methodologies; our independent workflows within the code itself is outlined more clearly within the js files***
 
-5. Creating the final index.html page 
+5. Creating the final index.html page using a template and then writing the HTML code.
 
 ## Additional library, not used in class
 - **Charts.js**; allows you to create a variety of charts (bar, line, etc.) within javascript (more information in the resources section)
