@@ -54,9 +54,6 @@ Contains all the javascript files the team used to create their visualizations a
 
 The html files associated with the webpages for each of our visualizations
 
-- **index.html**
-![a screenshot of the landing page](https://github.com/brupps/project_3/blob/main/images/index.PNG)
-
 - **charts2.html**
 ![a screenshot of the chartsJS visualization](https://github.com/brupps/project_3/blob/main/images/charts2image.PNG)
 
