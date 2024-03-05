@@ -10,6 +10,7 @@ One thing we notice from the data is that the biggest concentration of more sign
 ## Instructions
 1. Go to <a href="https://brupps.github.io/project_3/">Cyclonic Cartography</a>
 2. Click on a category to see the visualizations
+3. To see the presentation slides click <a href="https://github.com/brupps/project_3/blob/main/CyclonicCartography.pdf">Presentation Slides</a>
 
 ## Methodology
 1. Finding the data
