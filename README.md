@@ -21,10 +21,11 @@ One thing we notice from the data is that the biggest concentration of more sign
 4. Setting up the HTML + CSS and deploying the servers
 	- Since each visualization is contained within its own page we went through and created our own individual html and css documents (making sure to add the appropriate plugins and formatting)
 
+***Since each team member created their visualizations independently we all took different approaches with our methodologies; our independent workflows within the code itself is outlined more clearly within the js files***
+
 5. Creating the final index.html page
    	- Used a website template generator then wrote the HTML code.
 
-***Since each team member created their visualizations independently we all took different approaches with our methodologies; our independent workflows within the code itself is outlined more clearly within the js files***
 
 ## Additional library, not used in class
 - **Charts.js**; allows you to create a variety of charts (bar, line, etc.) within javascript (more information in the resources section)
@@ -72,8 +73,15 @@ Contains all the CSV (cleaned and uncleaned) files that were later converted int
 
 - AllStates2000-2023EF3-5 is the fully cleaned file; we cleaned (deleted unnecessary columns and missing data) and combined the other three CSVs into this one in order to include all the necessary dates
 
+### Files/ folders required for index.html (+ siter.io)
+- public folder
+- src folder
+- Scott.arterbury_files folder
+- node_modules folder
+- (individual files) .eslintrc.cjs, package.json, package-lock.json, vite.config.js
+
 ### Other Files
-- Cyclonic Cartography.pptx
+- CyclonicCartography.pptx/ CyclonicCartography.pdf
 	- The powerpoint presentation we as a team presented during class; includes the process we went through to complete the objectives provided
 
 - NoSQL_setup.ipynb
