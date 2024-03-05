@@ -1,11 +1,15 @@
 # Cyclonic Cartography: Mapping Significant Tornadoes
 
-## Description/ overview
+## Description/Overview
 The topic we have chosen is tornado data across the US. We have opted to investigate multiple avenues including the number of tornadoes, their intensity, frequency, width, and paths. Living in Oklahoma, tornadoes are something nearly everyone can relate to in some way; learning more about them and presenting that information in an easily accessible/ understandable format would be highly educational.
 
 Due to the large number of tornadoes that happen in the USA, we will concentrate on the data for EF3 to EF5. These are the storms that cause the most damage and loss of life and therefore are of the greatest concern. The data documents tornadoes from January 1, 2000, to December 31, 2023.
 
 One thing we notice from the data is that the biggest concentration of more significant tornadoes seem to occur in the southern states as opposed to the center of the US that most consider ‘Tornado Alley.’
+
+## Instructions
+1. Go to <a href="https://brupps.github.io/project_3/">Cyclonic Cartography</a>
+2. Click on a category to see the visualizations
 
 ## Methodology
 1. Finding the data
