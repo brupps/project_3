@@ -118,4 +118,6 @@ Our project was only exploratory in nature and not intended to influence policy 
 - <a href="https://geojson.io/#map=2/0/20">geoJSON editor </a>
 - <a href="https://www.accuweather.com/en/severe-weather/is-tornado-alley-shifting-east/1162839">Accuweather for tornado alley shape </a>
 - <a href="https://www.siter.io">Siter Website Template to write the HTML Landing Page</a>
+- <a href="https://csvjson.com/csv2json">CSV to JSON converter</a>
+- <a href="https://open-innovations.github.io/CSV2GeoJSON/">CSV to geoJSON converter</a>
 
